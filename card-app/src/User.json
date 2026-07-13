@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Thomas Andrew Felton",
+    "age": 38,
+    "bod": "September 22, 1987",
+    "zodiac": "Virgo",
+    "photo": "public/TomFelton.jpg"
+  },
+  {
+    "name": "Luke Damon Goss",
+    "age": 57,
+    "bod": "September 29, 1968",
+    "zodiac": "Libra",
+    "photo": "public/LukeGoss.jpg"
+  },
+  {
+    "name": "Ewan Robert Mitchell",
+    "age": 28,
+    "bod": "March 8, 1997",
+    "zodiac": "Pisces",
+    "photo": "public/EwanMitchell.jpg"
+  },
+  {
+    "name": "Thomas William Hiddleston",
+    "age": 44,
+    "bod": "February 9, 1981",
+    "zodiac": "Aquarius",
+    "photo": "public/TomHiddleston.jpg"
+  },
+  {
+    "name": "Wang Yibo",
+    "age": 28,
+    "bod": "August 8, 1997",
+    "zodiac": "Leo",
+    "photo": "public/WangYibo.jpg"
+  },
+  {
+    "name": "Taylor Alison Swift",
+    "age": 35,
+    "bod": "December 13, 1989",
+    "zodiac": "Sagittarius",
+    "photo": "public/TaylorSwift.jpg"
+  },
+  {
+    "name": "Sabastian Stan",
+    "age": 43,
+    "bod": "August 13, 1982",
+    "zodiac": "Leo",
+    "photo": "public/SabastianStan.jpg"
+  },
+  {
+    "name": "Emma Charlotte Watson",
+    "age": 35,
+    "bod": "April 15, 1990",
+    "zodiac": "Aries",
+    "photo": "public/EmmaWatson.jpg"
+  },
+  {
+    "name": "Billie Eilish O'Connell",
+    "age": 23,
+    "bod": "December 18, 2001",
+    "zodiac": "Sagittarius",
+    "photo": "public/BillieEilish.jpg"
+  }
+]

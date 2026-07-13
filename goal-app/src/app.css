@@ -1,0 +1,35 @@
+.goals-container {
+    background-color:lightskyblue;
+    border: 3px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: 500px;
+    box-shadow: 0 4px 8px blue  ;
+    justify-content: center;
+    align-items: center;
+}
+.goals-title {
+    text-align: center;
+    color: darkblue;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 500px;
+}
+.goals-list {
+    list-style-type: none;
+    padding: 0;
+    color: darkblue;
+}
+.goal-item {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.goal-item strong {
+    color: #343a40; /* Dark color for emphasis */
+}
+.goal-divider {
+    border: none;
+    border-top: 2px solid gold; /* Teal line */
+    margin: 0 0 10px 0; /* Spacing below the line */
+}

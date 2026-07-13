@@ -1,0 +1,53 @@
+/* ===== General Page Styling ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background:green;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 50px;
+}
+
+/* ===== User Card Styling ===== */
+.user-card {
+  background: linear-gradient(white, yellowgreen);
+  border-radius: 20px;
+  padding: 24px 38px;
+  width: 600px;
+  margin:30px;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px gold;
+}
+
+/* ===== Text Styling ===== */
+.user-card h2 {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  font-size: 18px;
+  color: black;
+  margin: 6px 0;
+}
+
+.user-card span {
+  font-weight: 600;
+  color: #273c75;
+}
+
+.user-photo{
+  width: 210px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 90%;  /* circular photo */
+  margin-left: 350px;
+}

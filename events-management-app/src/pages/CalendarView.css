@@ -1,0 +1,306 @@
+/* --- Ultra-Clear Professional Calendar Theme --- */
+:root {
+  --primary: #2563eb;         /* High-contrast Blue */
+  --primary-soft: #eff6ff;
+  --text-main: #0f172a;       /* Dark Slate (Near black for readability) */
+  --text-muted: #475569;      /* Slate 600 */
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --border-color: #cbd5e1;    /* Stronger border color for visibility */
+  --tile-outline: #f1f5f9;    /* Subtle grid line */
+}
+
+.calendar-page-wrapper {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.calendar-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.calendar-header {
+  padding: 30px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+/* --- CALENDAR GRID VISIBILITY --- */
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  padding: 15px;
+}
+
+/* Navigation: Months and Years labels */
+.react-calendar__navigation {
+  display: flex;
+  height: 50px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  /* This makes "January 2024" etc. extremely clear */
+  font-size: 1.2rem !important; 
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  border-radius: 8px;
+}
+
+.react-calendar__navigation button:enabled:hover {
+  background-color: var(--primary-soft) !important;
+}
+
+/* Weekdays (S M T W T F S) */
+.react-calendar__month-view__weekdays__weekday {
+  padding: 10px;
+  text-decoration: none !important;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Individual Tiles (The Grid) */
+.react-calendar__tile {
+  height: 75px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--tile-outline) !important; /* Visible grid lines */
+  background: none;
+  color: var(--text-main);
+  font-size: 1.05rem; /* Larger font for all dates */
+  font-weight: 600;    /* Semi-bold for clear reading */
+  transition: all 0.2s ease;
+}
+
+/* Year/Month view tiles (when selecting from the grid) */
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile {
+  padding: 25px 0 !important;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Current Day */
+.react-calendar__tile--now {
+  background: #fef9c3 !important; /* Soft yellow highlight */
+  color: #854d0e !important;
+  font-weight: 800;
+}
+
+/* Active Selected Day */
+.react-calendar__tile--active {
+  background: var(--primary) !important;
+  color: white !important;
+}
+
+/* Hover effect: Clarity Zoom */
+.react-calendar__tile:enabled:hover {
+  background-color: var(--bg-card) !important;
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+}
+
+/* Dates outside the current month (Neighboring) */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #94a3b8 !important; /* Still visible, but distinct */
+  background-color: #f8fafc !important;
+}
+
+/* Event Dots */
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.event-indicator-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/* --- Details Section --- */
+.details-section {
+  background-color: #f8fafc;
+  border-left: 1px solid var(--border-color);
+  padding: 30px;
+}
+
+.details-header h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.event-item {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 15px;
+}
+
+.event-time-accent {
+  width: 5px;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.event-info h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.event-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* --- Modern Event Card Styling --- */
+
+.event-card-modern {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.event-card-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  border-color: #3b82f6;
+}
+
+/* Color strip on the left */
+.event-card-accent {
+  width: 6px;
+  background: linear-gradient(to bottom, #3b82f6, #6366f1);
+}
+
+.event-card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.event-card-header h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.event-category-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Grid for Time and Location */
+.event-details-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.detail-icon {
+  font-size: 1rem;
+}
+
+.event-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.6;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+}
+
+/* Empty State Styling */
+.empty-state-message {
+  padding: 40px;
+  text-align: center;
+  background: #f8fafc;
+  border: 2px dashed #e2e8f0;
+  border-radius: 16px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Responsive Fix */
+@media (max-width: 800px) {
+  .main-layout { grid-template-columns: 1fr; }
+  .details-section { border-left: none; border-top: 1px solid var(--border-color); }
+}
